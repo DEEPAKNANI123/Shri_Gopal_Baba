@@ -209,6 +209,10 @@ app.post('/api/ai/query', (req, res) => {
   res.json(reply);
 });
 
-app.listen(PORT, () => {
-  console.log(`Gopal Baba Ashram Ecosystem API server running on port ${PORT}`);
-});
+export default app;
+
+if (!process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`Gopal Baba Ashram Ecosystem API server running on port ${PORT}`);
+  });
+}

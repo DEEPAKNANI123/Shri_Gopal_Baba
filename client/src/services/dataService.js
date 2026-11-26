@@ -10,7 +10,7 @@ import {
   initialDonationCategories
 } from '../../../server/src/data/seedData.js';
 
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = import.meta.env.VITE_API_BASE_URL || '/api';
 
 // Safe localStorage helper
 const getLocal = (key, fallback) => {
